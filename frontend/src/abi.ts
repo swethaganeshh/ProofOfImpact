@@ -1,5 +1,5 @@
 
-export const POI_CONTRACT_ADDRESS= "0xd26dB83434343379Ed64f9792BB98686362E6f4A" as string;
+export const POI_CONTRACT_ADDRESS= "0xd26dB83434343379Ed64f9792BB98686362E6f4A" as `0x${string}`;
 
 export const POI_ABI =
 	[
