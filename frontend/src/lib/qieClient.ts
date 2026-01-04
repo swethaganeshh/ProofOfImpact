@@ -18,7 +18,15 @@ export const publicClient = createPublicClient({
 });
 
 export const getWalletClient = () => {
-  if (!window.ethereum) throw new Error("Wallet not found");
+  // ✅ Safe runtime guard
+  if (typeof window === "undefined") {
+    throw new Error("Wallet client can only be used in the browser");
+  }
+
+  if (!window.ethereum) {
+    throw new Error("Ethereum provider not found");
+  }
+
   return createWalletClient({
     chain: publicClient.chain,
     transport: custom(window.ethereum),
