@@ -244,6 +244,7 @@ export default function VerifyPOIPage() {
       address = await connectWallet();
       if (!address) return;
     }
+    if (typeof window === "undefined") return;
 
     if (!window.ethereum) {
       console.error("Ethereum provider not found");
