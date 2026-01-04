@@ -112,8 +112,8 @@ export default function ShowPOIPage() {
     const links: string[] = [];
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      const res = await uploadFileToPinata(file);
-      const url = `https://gateway.pinata.cloud/ipfs/${res.IpfsHash}`;
+      const hash = await uploadFileToPinata(file);
+      const url = `https://gateway.pinata.cloud/ipfs/${hash}`;
       links.push(url);
     }
     setInvoiceLinks(links);
@@ -126,8 +126,8 @@ export default function ShowPOIPage() {
     const links: string[] = [];
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      const res = await uploadFileToPinata(file);
-      const url = `https://gateway.pinata.cloud/ipfs/${res.IpfsHash}`;
+      const hash = await uploadFileToPinata(file);
+      const url = `https://gateway.pinata.cloud/ipfs/${hash}`;
       links.push(url);
     }
     setPhotoLinks(links);

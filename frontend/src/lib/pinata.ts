@@ -7,6 +7,8 @@ export async function uploadFileToPinata(file: File) {
   formData.append("file", file);
 
   const jwt = process.env.NEXT_PUBLIC_PINATA_JWT;
+  const PINATA_API_SECRET = process.env.NEXT_PUBLIC_PINATA_API_SECRET!;
+
 
   if (!jwt) {
     throw new Error("Pinata JWT missing");
