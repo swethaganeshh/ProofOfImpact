@@ -126,7 +126,7 @@ export default function ShowPOIPage() {
     const links: string[] = [];
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      const res = await uploadFileToPinata(file, pinataApiKey, pinataApiSecret);
+      const res = await uploadFileToPinata(file);
       const url = `https://gateway.pinata.cloud/ipfs/${res.IpfsHash}`;
       links.push(url);
     }
