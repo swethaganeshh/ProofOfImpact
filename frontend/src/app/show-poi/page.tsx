@@ -22,7 +22,6 @@ export default function ShowPOIPage() {
   const [invoices, setInvoices] = useState<FileList | null>(null);
   const [photos, setPhotos] = useState<FileList | null>(null);
   const [showSuccess, setShowSuccess] = useState(false);
-  const pinataApiKey = process.env.NEXT_PUBLIC_PINATA_API_KEY || "";
   const [invoiceLinks, setInvoiceLinks] = useState<string[]>([]);
   const [photoLinks, setPhotoLinks] = useState<string[]>([]);
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
